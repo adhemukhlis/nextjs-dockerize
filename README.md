@@ -91,6 +91,12 @@
 
 1. add origin to your project
 
+   gitlab
+   ```bash
+   git remote add origin_server https://<USERNAME>:<ACCESS_TOKEN>@gitlab.com/<USERNAME_OR_REPO_GROUP>/<REPO_NAME>.git
+   ```
+
+   github
    ```bash
    git remote add origin_server https://<USERNAME>:<ACCESS_TOKEN>@gitlab.com/<USERNAME_OR_REPO_GROUP>/<REPO_NAME>.git
    ```
@@ -103,7 +109,7 @@
 
 ## single line deploy
 
-1. create `deploy.sh` file in root project with
+1. create `deploy.sh` file in root project with (already exist)
 
    ```bash
    # Exit immediately if any command fails
@@ -119,7 +125,7 @@
    docker image prune --force --filter='dangling=true'
    docker builder prune --force
    ```
-
+   > `3040` is final port
 2. set permission to sh file
 
    ```bash
